@@ -3,6 +3,7 @@ import clsx from 'clsx';
 
 export default function InvoiceStatus({ status }: { status: string }) {
   return (
+    // clsx is used to display styles based on a given condition or state
     <span
       className={clsx(
         'inline-flex items-center rounded-full px-2 py-1 text-xs',
