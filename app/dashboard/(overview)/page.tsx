@@ -13,7 +13,7 @@ export default async function Page() {
     numberOfInvoices,
     numberOfCustomers,
     totalPaidInvoices,
-    totalPendingInvoices,fallback={<RevenueChartSkeleton />}
+    totalPendingInvoices,
   } = await fetchCardData();
 
   return (
@@ -33,7 +33,7 @@ export default async function Page() {
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
         <Suspense fallback={<RevenueChartSkeleton />}>
-          <RevenueChart revenue={revenue} />
+          <RevenueChart />
         </Suspense>
         <LatestInvoices latestInvoices={latestInvoices} />
       </div>
